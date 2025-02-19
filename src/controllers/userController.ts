@@ -103,7 +103,7 @@ export const updateUser = async (req: Request, res: Response) => {
         { runValidators: true, new: true }
       );
   
-      res.status(201).json(user);
+      res.status(201).json({ message: 'User successfully deleted' });
     } catch (error: any) {
       res.status(400).json({
         message: error.message,
