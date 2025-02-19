@@ -78,12 +78,28 @@ export const updateUser = async (req: Request, res: Response) => {
       });
     }
   };
-
+//Friend add
   export const addFriend = async (req: Request, res: Response) => {
     try {
       const user = await User.findOneAndUpdate(
         { _id: req.params.userId},
         { $push: { friends: req.params.friendId } },
+        { runValidators: true, new: true }
+      );
+  
+      res.status(201).json(user);
+    } catch (error: any) {
+      res.status(400).json({
+        message: error.message,
+      });
+    }
+  };
+//Friend Delete
+  export const deleteFriend = async (req: Request, res: Response) => {
+    try {
+      const user = await User.findOneAndUpdate(
+        { _id: req.params.userId},
+        { $pull: { friends: req.params.friendId } },
         { runValidators: true, new: true }
       );
   
