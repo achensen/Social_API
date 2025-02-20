@@ -29,6 +29,7 @@ Next open Insomia for all the GET, POST, PUT, and DELETE requests.
 
 
 ## Walkthrough Video
+[Walkthrough Google Drive Link](https://drive.google.com/file/d/156fSifTnDg1pbPGjO5pteu_ggWZjZXNH/view?usp=sharing)
 
 ## Contributions
 EDX Starter code, myself, with some tutoring assistance (see additional notes)
